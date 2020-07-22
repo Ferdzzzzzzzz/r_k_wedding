@@ -49,7 +49,7 @@ packages:
       name: bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.0-dev.2"
+    version: "6.0.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -201,7 +201,7 @@ packages:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.0-dev.1"
+    version: "6.0.0"
   flutter_hooks:
     dependency: "direct main"
     description:
