@@ -1,4 +1,3 @@
-import 'package:client_app/domain/auth/email_address.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
@@ -24,9 +23,6 @@ class MyHomePage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final _counter = useState(0);
-    final email1 = EmailAddress('ferdz.steenkamp@gmail.com');
-    final email2 = EmailAddress('ferdz.steenkamp@gmail.com');
-    final someBool = email1 == email2;
 
     return Scaffold(
       appBar: AppBar(
@@ -42,7 +38,6 @@ class MyHomePage extends HookWidget {
             Text(
               '${_counter.value}',
             ),
-            Text('$someBool'),
           ],
         ),
       ),
