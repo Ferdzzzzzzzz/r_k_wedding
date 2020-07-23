@@ -1,4 +1,3 @@
-import 'package:client_app/core/errors.dart';
 import 'package:client_app/domain/auth/auth_failure.dart';
 import 'package:client_app/domain/auth/i_auth_facade.dart';
 import 'package:dartz/dartz.dart';
