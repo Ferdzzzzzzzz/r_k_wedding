@@ -18,6 +18,9 @@ dependencies:
   hive: 1.4.1+1
   dartz: 0.9.1
   equatable: ^1.2.2
+  firebase_core: ^0.4.5
+  firebase_auth: ^0.16.1
+  google_sign_in: ^4.5.1
 
 dev_dependencies:
   flutter_test:
