@@ -4,9 +4,11 @@ import 'package:client_app/domain/auth/i_auth_facade.dart';
 import 'package:client_app/domain/auth/value_objects/email_address.dart';
 import 'package:client_app/domain/auth/value_objects/password.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 
 import './sign_in_form_state.dart';
 
+@injectable
 class SignInFormCubit extends Cubit<SignInFormState> {
   final IAuthFacade _authFacade;
 
