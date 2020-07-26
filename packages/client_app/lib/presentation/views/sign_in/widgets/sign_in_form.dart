@@ -1,5 +1,5 @@
-import 'package:client_app/application/auth/sign_in_form/cubit/sign_in_form_cubit.dart';
-import 'package:client_app/application/auth/sign_in_form/cubit/sign_in_form_state.dart';
+import 'package:client_app/application/auth/sign_in_form/sign_in_form_cubit.dart';
+import 'package:client_app/application/auth/sign_in_form/sign_in_form_state.dart';
 import 'package:client_app/domain/auth/failures/auth_failure.dart';
 import 'package:client_app/presentation/core/side_effects/snack_bar_helpers.dart';
 import 'package:flutter/material.dart';

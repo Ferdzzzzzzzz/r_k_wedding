@@ -63,8 +63,9 @@ class FirebaseAuthFacade implements IAuthFacade {
   }
 
   @override
-  Future<Option<User>> getSignedInUser() =>
-      _firebaseAuth.currentUser().then((user) => optionOf(user?.toDomain()));
+  Future<Option<User>> getSignedInUser() => _firebaseAuth
+      .currentUser()
+      .then((firebaseUser) => optionOf(firebaseUser?.toDomain()));
 
   @override
   Future<void> signOut() async {

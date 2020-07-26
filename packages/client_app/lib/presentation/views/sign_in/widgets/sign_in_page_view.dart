@@ -1,5 +1,5 @@
-import 'package:client_app/presentation/sign_in/widgets/landing_page.dart';
-import 'package:client_app/presentation/sign_in/widgets/sign_in_form.dart';
+import 'package:client_app/presentation/views/sign_in/widgets/landing_page.dart';
+import 'package:client_app/presentation/views/sign_in/widgets/sign_in_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
