@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:client_app/domain/auth/auth_failure.dart';
-import 'package:client_app/domain/auth/i_auth_facade.dart';
+import 'package:client_app/domain/auth/failures/auth_failure.dart';
+import 'package:client_app/domain/auth/facades/i_auth_facade.dart';
 import 'package:client_app/domain/auth/value_objects/email_address.dart';
 import 'package:client_app/domain/auth/value_objects/password.dart';
 import 'package:dartz/dartz.dart';
@@ -30,7 +30,7 @@ class SignInFormCubit extends Cubit<SignInFormState> {
     emit(updatedState);
   }
 
-  Future<void> signInWithEmailAndPasswordPressed(String password) async {
+  Future<void> signInWithEmailAndPasswordPressed() async {
     final isEmailValid = state.emailAddress.isValid();
     final isPasswordValid = state.password.isValid();
 
@@ -42,7 +42,7 @@ class SignInFormCubit extends Cubit<SignInFormState> {
     }
   }
 
-  Future<void> signInWithGooglePressed(String password) async {
+  Future<void> signInWithGooglePressed() async {
     emit(_submittingState(state));
 
     final failureOrSuccess = await _authFacade.signInWithGoogle();

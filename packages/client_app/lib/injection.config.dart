@@ -10,7 +10,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/get_it_helper.dart';
 
 import 'application/auth/sign_in_form/cubit/sign_in_form_cubit.dart';
-import 'domain/auth/i_auth_facade.dart';
+import 'domain/auth/facades/i_auth_facade.dart';
 import 'infrastructure/auth/firebase_auth_facade.dart';
 import 'infrastructure/core/firebase_injectable_module.dart';
 
