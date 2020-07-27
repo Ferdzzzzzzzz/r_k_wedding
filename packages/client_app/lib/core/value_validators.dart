@@ -17,7 +17,7 @@ Either<ValueFailure<String>, String> validatePassword(String input) {
   try {
     int.parse(input);
 
-    if (input.length != 4) {
+    if (input.length != 6) {
       return Left(ValueFailure.shortPassword(failedValue: input));
     }
     return Right(input);

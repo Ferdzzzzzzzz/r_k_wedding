@@ -33,7 +33,6 @@ class SignInForm extends StatelessWidget {
                 _renderEmailField(signInCubit),
                 _renderPasswordField(signInCubit),
                 _renderSignInButton(signInCubit),
-                _renderGoogleSignInButton(signInCubit, maxWidth),
               ],
             ),
           ),
@@ -69,7 +68,7 @@ class SignInForm extends StatelessWidget {
       autocorrect: false,
       keyboardType: TextInputType.number,
       obscureText: true,
-      maxLength: 4,
+      maxLength: 6,
       onChanged: (value) => signInCubit.passwordChanged(value),
       validator: (value) => signInCubit.state.password.value.fold(
         (f) => f.maybeMap(
@@ -86,29 +85,6 @@ class SignInForm extends StatelessWidget {
       color: Colors.blue,
       onPressed: () => signInCubit.signInWithEmailAndPasswordPressed(),
       child: const Text('Sign In'),
-    );
-  }
-
-  Widget _renderGoogleSignInButton(
-      SignInFormCubit signInCubit, double maxWidth) {
-    return Container(
-      width: maxWidth * 0.5,
-      child: RaisedButton(
-        padding: EdgeInsets.symmetric(horizontal: maxWidth * 0.2),
-        onPressed: () => signInCubit.signInWithGooglePressed(),
-        color: Colors.lightBlue,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(
-              FontAwesome.google,
-              color: Colors.white,
-            ),
-            const Spacer(),
-            const Text('Sign in with Google')
-          ],
-        ),
-      ),
     );
   }
 

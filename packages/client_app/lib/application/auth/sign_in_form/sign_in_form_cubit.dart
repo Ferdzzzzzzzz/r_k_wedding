@@ -42,14 +42,6 @@ class SignInFormCubit extends Cubit<SignInFormState> {
     }
   }
 
-  Future<void> signInWithGooglePressed() async {
-    emit(_submittingState(state));
-
-    final failureOrSuccess = await _authFacade.signInWithGoogle();
-
-    emit(_mapAuthResultToState(failureOrSuccess));
-  }
-
   SignInFormState _submittingState(SignInFormState state) {
     return state.copyWith(
       isSubmitting: true,
