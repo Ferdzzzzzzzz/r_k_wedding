@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 
 @MaterialAutoRouter(routes: <AutoRoute>[
   MaterialRoute<Widget>(page: HomeView, initial: true),
-  MaterialRoute<Widget>(page: RsvpView),
-  MaterialRoute<Widget>(page: RestaurantView),
-  MaterialRoute<Widget>(page: WineFarmView),
+  MaterialRoute<Widget>(page: RsvpView, name: 'rsvp'),
+  MaterialRoute<Widget>(page: RestaurantView, name: 'restaurant'),
+  MaterialRoute<Widget>(page: WineFarmView, name: 'wineFarm'),
 ])
 class $Router {}

@@ -16,14 +16,14 @@ import '../views/wine_farms/wine_farm_view.dart';
 
 class Routes {
   static const String homeView = '/';
-  static const String rsvpView = '/rsvp-view';
-  static const String restaurantView = '/restaurant-view';
-  static const String wineFarmView = '/wine-farm-view';
+  static const String rsvp = '/rsvp-view';
+  static const String restaurant = '/restaurant-view';
+  static const String wineFarm = '/wine-farm-view';
   static const all = <String>{
     homeView,
-    rsvpView,
-    restaurantView,
-    wineFarmView,
+    rsvp,
+    restaurant,
+    wineFarm,
   };
 }
 
@@ -32,9 +32,9 @@ class Router extends RouterBase {
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
     RouteDef(Routes.homeView, page: HomeView),
-    RouteDef(Routes.rsvpView, page: RsvpView),
-    RouteDef(Routes.restaurantView, page: RestaurantView),
-    RouteDef(Routes.wineFarmView, page: WineFarmView),
+    RouteDef(Routes.rsvp, page: RsvpView),
+    RouteDef(Routes.restaurant, page: RestaurantView),
+    RouteDef(Routes.wineFarm, page: WineFarmView),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
