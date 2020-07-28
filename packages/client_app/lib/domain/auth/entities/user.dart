@@ -1,4 +1,4 @@
-import 'package:client_app/domain/auth/value_objects/user_id.dart';
+import 'package:client_app/domain/auth/value_objects/unique_id.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user.freezed.dart';
