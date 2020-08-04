@@ -23,7 +23,7 @@ class _$RestaurantWatcherStateTearOff {
   }
 
 // ignore: unused_element
-  _Loaded loaded(KtList<Restaurant> restaurants) {
+  _Loaded loaded(Either<RestaurantFailure, KtList<Restaurant>> restaurants) {
     return _Loaded(
       restaurants,
     );
@@ -45,14 +45,16 @@ mixin _$RestaurantWatcherState {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loaded(KtList<Restaurant> restaurants),
+    @required
+        Result loaded(
+            Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     @required Result failure(NetworkFailure failure),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loaded(KtList<Restaurant> restaurants),
+    Result loaded(Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     Result failure(NetworkFailure failure),
     @required Result orElse(),
   });
@@ -124,7 +126,9 @@ class _$_Initial implements _Initial {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loaded(KtList<Restaurant> restaurants),
+    @required
+        Result loaded(
+            Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     @required Result failure(NetworkFailure failure),
   }) {
     assert(initial != null);
@@ -139,7 +143,7 @@ class _$_Initial implements _Initial {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loaded(KtList<Restaurant> restaurants),
+    Result loaded(Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     Result failure(NetworkFailure failure),
     @required Result orElse(),
   }) {
@@ -224,7 +228,9 @@ class _$_LoadInProgress implements _LoadInProgress {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loaded(KtList<Restaurant> restaurants),
+    @required
+        Result loaded(
+            Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     @required Result failure(NetworkFailure failure),
   }) {
     assert(initial != null);
@@ -239,7 +245,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loaded(KtList<Restaurant> restaurants),
+    Result loaded(Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     Result failure(NetworkFailure failure),
     @required Result orElse(),
   }) {
@@ -289,7 +295,7 @@ abstract class _LoadInProgress implements RestaurantWatcherState {
 abstract class _$LoadedCopyWith<$Res> {
   factory _$LoadedCopyWith(_Loaded value, $Res Function(_Loaded) then) =
       __$LoadedCopyWithImpl<$Res>;
-  $Res call({KtList<Restaurant> restaurants});
+  $Res call({Either<RestaurantFailure, KtList<Restaurant>> restaurants});
 }
 
 class __$LoadedCopyWithImpl<$Res>
@@ -308,7 +314,7 @@ class __$LoadedCopyWithImpl<$Res>
     return _then(_Loaded(
       restaurants == freezed
           ? _value.restaurants
-          : restaurants as KtList<Restaurant>,
+          : restaurants as Either<RestaurantFailure, KtList<Restaurant>>,
     ));
   }
 }
@@ -317,7 +323,7 @@ class _$_Loaded implements _Loaded {
   const _$_Loaded(this.restaurants) : assert(restaurants != null);
 
   @override
-  final KtList<Restaurant> restaurants;
+  final Either<RestaurantFailure, KtList<Restaurant>> restaurants;
 
   @override
   String toString() {
@@ -346,7 +352,9 @@ class _$_Loaded implements _Loaded {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loaded(KtList<Restaurant> restaurants),
+    @required
+        Result loaded(
+            Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     @required Result failure(NetworkFailure failure),
   }) {
     assert(initial != null);
@@ -361,7 +369,7 @@ class _$_Loaded implements _Loaded {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loaded(KtList<Restaurant> restaurants),
+    Result loaded(Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     Result failure(NetworkFailure failure),
     @required Result orElse(),
   }) {
@@ -405,9 +413,10 @@ class _$_Loaded implements _Loaded {
 }
 
 abstract class _Loaded implements RestaurantWatcherState {
-  const factory _Loaded(KtList<Restaurant> restaurants) = _$_Loaded;
+  const factory _Loaded(
+      Either<RestaurantFailure, KtList<Restaurant>> restaurants) = _$_Loaded;
 
-  KtList<Restaurant> get restaurants;
+  Either<RestaurantFailure, KtList<Restaurant>> get restaurants;
   _$LoadedCopyWith<_Loaded> get copyWith;
 }
 
@@ -480,7 +489,9 @@ class _$_Failure implements _Failure {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loaded(KtList<Restaurant> restaurants),
+    @required
+        Result loaded(
+            Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     @required Result failure(NetworkFailure failure),
   }) {
     assert(initial != null);
@@ -495,7 +506,7 @@ class _$_Failure implements _Failure {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loaded(KtList<Restaurant> restaurants),
+    Result loaded(Either<RestaurantFailure, KtList<Restaurant>> restaurants),
     Result failure(NetworkFailure failure),
     @required Result orElse(),
   }) {

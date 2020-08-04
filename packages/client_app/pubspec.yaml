@@ -3,20 +3,20 @@ description: Ruben and Katie Wedding App
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.8.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_hooks: 0.12.0
-  flutter_bloc: 6.0.0
-  freezed_annotation: 0.11.0
+  flutter_hooks: 0.13.0
+  flutter_bloc: 6.0.1
+  freezed_annotation: 0.11.0+1
   url_launcher: 5.5.0
-  kt_dart: ^0.7.0+1
-  auto_route: ^0.6.6
+  kt_dart: 0.7.0+1
+  auto_route: ^0.6.7
   get_it: ^4.0.4
   dartz: 0.9.1
-  equatable: ^1.2.2
+  equatable: ^1.2.3
   firebase_core: ^0.4.5
   firebase_auth: ^0.16.1
   injectable: ^1.0.2
@@ -27,15 +27,19 @@ dependencies:
   google_fonts: ^1.1.0
   flushbar: 1.10.4
   uuid: ^2.2.0
+  cloud_firestore: ^0.13.7
+
+  json_annotation: ^3.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   lint: ^1.2.0
   freezed: 0.11.4
-  build_runner: ^1.10.0
-  injectable_generator: ^1.0.2
-  auto_route_generator: ^0.6.6
+  build_runner: ^1.10.1
+  injectable_generator: ^1.0.3
+  auto_route_generator: ^0.6.7
+  json_serializable: ^3.3.0
 
 flutter:
   uses-material-design: true
