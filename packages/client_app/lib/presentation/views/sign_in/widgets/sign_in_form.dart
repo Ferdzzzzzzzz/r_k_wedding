@@ -4,7 +4,6 @@ import 'package:client_app/domain/auth/failures/auth_failure.dart';
 import 'package:client_app/presentation/core/side_effects/snack_bar_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import "package:build_context/build_context.dart";
 
 class SignInForm extends StatelessWidget {
@@ -43,8 +42,8 @@ class SignInForm extends StatelessWidget {
 
   Widget _renderEmailField(SignInFormCubit signInCubit) {
     return TextFormField(
-      decoration: InputDecoration(
-        prefixIcon: Icon(Ionicons.md_mail),
+      decoration: const InputDecoration(
+        prefixIcon: Icon(Icons.mail),
         labelText: 'Email',
       ),
       autocorrect: false,
@@ -61,8 +60,8 @@ class SignInForm extends StatelessWidget {
 
   Widget _renderPasswordField(SignInFormCubit signInCubit) {
     return TextFormField(
-      decoration: InputDecoration(
-        prefixIcon: Icon(Ionicons.md_lock),
+      decoration: const InputDecoration(
+        prefixIcon: Icon(Icons.lock),
         labelText: 'Pin',
       ),
       autocorrect: false,

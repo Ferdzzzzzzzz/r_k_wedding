@@ -8,38 +8,59 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_hooks: 0.13.0
-  flutter_bloc: 6.0.1
+  flutter_hooks: 0.14.0
+  flutter_bloc: 6.0.5
   freezed_annotation: 0.11.0+1
-  url_launcher: 5.5.0
+  url_launcher: 5.5.3
   kt_dart: 0.7.0+1
   auto_route: ^0.6.7
   get_it: ^4.0.4
   dartz: 0.9.1
-  equatable: ^1.2.3
-  firebase_core: ^0.4.5
-  firebase_auth: ^0.16.1
-  injectable: ^1.0.2
-  build_context: 2.0.4
+  equatable: ^1.2.5
+  firebase_core: ^0.5.0
+  firebase_auth: ^0.18.0+1
+  injectable: ^1.0.4
+  build_context: ^2.0.4
   font_awesome_flutter: 8.8.1
   hexcolor: ^1.0.4
-  flutter_vector_icons: 0.2.1
   google_fonts: ^1.1.0
   flushbar: 1.10.4
-  uuid: ^2.2.0
-  cloud_firestore: ^0.13.7
-
+  uuid: ^2.2.2
+  cloud_firestore: ^0.14.0+2
   json_annotation: ^3.0.1
+  rxdart: ^0.24.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   lint: ^1.2.0
-  freezed: 0.11.4
+  freezed: 0.11.6
   build_runner: ^1.10.1
-  injectable_generator: ^1.0.3
-  auto_route_generator: ^0.6.7
-  json_serializable: ^3.3.0
+  injectable_generator: ^1.0.4
+  auto_route_generator: ^0.6.8
+  json_serializable: ^3.4.1
+  flutter_gen: 1.1.0
+  flutter_launcher_icons: 0.8.0
+  flutter_native_splash: 0.1.9
+
+# flutter pub run flutter_launcher_icons:main
+flutter_icons:
+  image_path: "assets/images/icon.png"
+  adaptive_icon_foreground: "assets/images/circle_launcher.png"
+  adaptive_icon_background: "#6D8474"
+  android: true
+  ios: true
+
+# flutter pub pub run flutter_native_splash:create
+flutter_native_splash:
+  image: assets/images/splash.png
+  color: "6D8474"
+
+flutter_gen:
+  colors:
+    inputs:
+      - assets/color/colors.xml
+      - assets/images/icon.png
 
 flutter:
   uses-material-design: true

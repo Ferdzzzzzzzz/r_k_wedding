@@ -6,15 +6,12 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 class SignInPageView extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final _pageController = useState(PageController(initialPage: 0));
-    // const _placeholder =
-    //     'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80';
+    final _pageController = useState(PageController());
+
     return Stack(
       children: <Widget>[
-        // Image.network(_placeholder),
         PageView(
           controller: _pageController.value,
-          scrollDirection: Axis.horizontal,
           physics: const NeverScrollableScrollPhysics(),
           children: <Widget>[
             LandingPage(() {

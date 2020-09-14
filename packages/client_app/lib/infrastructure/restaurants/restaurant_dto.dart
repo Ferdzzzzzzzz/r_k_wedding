@@ -30,8 +30,8 @@ abstract class RestaurantDto implements _$RestaurantDto {
       _$RestaurantDtoFromJson(json);
 
   factory RestaurantDto.fromFirestore(DocumentSnapshot doc) {
-    return RestaurantDto.fromJson(doc.data).copyWith(
-      id: doc.documentID,
+    return RestaurantDto.fromJson(doc.data()).copyWith(
+      id: doc.id,
     );
   }
 }

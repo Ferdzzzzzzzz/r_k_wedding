@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import "package:build_context/build_context.dart";
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class RoundedBtn extends HookWidget {
@@ -45,7 +44,7 @@ class RoundedBtn extends HookWidget {
   Widget _renderButton(double width, double height) {
     return Center(
       child: Icon(
-        Ionicons.md_arrow_forward,
+        Icons.forward,
         color: Hexcolor('522142'),
       ),
     );

@@ -4,9 +4,8 @@ import 'package:client_app/domain/auth/facades/i_auth_facade.dart';
 import 'package:dartz/dartz.dart';
 import 'package:client_app/domain/auth/value_objects/password.dart';
 import 'package:client_app/domain/auth/value_objects/email_address.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import './firebase_user_mapper_extension.dart';
 
@@ -29,7 +28,7 @@ class FirebaseAuthFacade implements IAuthFacade {
         password: password.getOrCrash(),
       );
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseAuthException catch (e) {
       if (e.code == 'ERROR_USER_NOT_FOUND' ||
           e.code == 'ERROR_WRONG_PASSWORD') {
         return left(const AuthFailure.invalidEmailPasswordCombination());
@@ -39,9 +38,8 @@ class FirebaseAuthFacade implements IAuthFacade {
   }
 
   @override
-  Future<Option<User>> getSignedInUser() => _firebaseAuth
-      .currentUser()
-      .then((firebaseUser) => optionOf(firebaseUser?.toDomain()));
+  Future<Option<User>> getSignedInUser() async =>
+      optionOf(_firebaseAuth.currentUser?.toDomain());
 
   @override
   Future<void> signOut() async {
