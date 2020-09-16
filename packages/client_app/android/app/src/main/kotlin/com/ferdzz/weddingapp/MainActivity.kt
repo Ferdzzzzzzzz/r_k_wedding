@@ -1,4 +1,4 @@
-package com.ferdzz.weddingApp
+package com.ferdzz.weddingapp
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -9,6 +9,7 @@ class MountainCard extends StatelessWidget {
     return GenericCard(
       _renderBody(context),
       'activities',
+      () => print('activities'),
     );
   }
 

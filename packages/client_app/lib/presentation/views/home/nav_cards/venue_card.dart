@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:build_context/build_context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class BedCard extends StatelessWidget {
+class VenueCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GenericCard(
       _renderBody(context),
-      'accomodation',
-      () => print('accomodation'),
+      'venue',
+      () => print('venue'),
     );
   }
 
@@ -18,7 +18,7 @@ class BedCard extends StatelessWidget {
 
     return Center(
       child: Icon(
-        FontAwesomeIcons.bed,
+        FontAwesomeIcons.mapSigns,
         size: maxWidth * 0.1,
       ),
     );

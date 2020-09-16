@@ -1,3 +1,4 @@
+import 'package:client_app/gen/colors.gen.dart';
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +12,12 @@ Future<dynamic> snackBarError(
     margin: const EdgeInsets.all(8),
     borderRadius: 8,
     title: title,
+    backgroundColor: ColorName.darkGrey,
     message: message,
     icon: Icon(
       Icons.warning,
       size: 28.0,
-      color: Colors.red[300],
+      color: ColorName.warningRed,
     ),
     //leftBarIndicatorColor: Colors.red[300],
     duration: duration,

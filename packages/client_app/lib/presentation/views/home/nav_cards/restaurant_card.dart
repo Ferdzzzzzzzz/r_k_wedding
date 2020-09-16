@@ -1,9 +1,9 @@
+import 'package:client_app/gen/assets.gen.dart';
 import 'package:client_app/presentation/views/home/nav_cards/generic_card.dart';
 import 'package:flutter/material.dart';
 import 'package:build_context/build_context.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class ScheduleCard extends StatelessWidget {
+class RestaurantCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final maxWidth = context.mediaQuerySize.width;
@@ -15,8 +15,8 @@ class ScheduleCard extends StatelessWidget {
       ),
       child: GenericCard(
         _renderBody(context),
-        'schedule',
-        () => print('schedule'),
+        'restaurants',
+        () => print('eat'),
       ),
     );
   }
@@ -25,9 +25,9 @@ class ScheduleCard extends StatelessWidget {
     final maxWidth = context.mediaQuerySize.width;
 
     return Center(
-      child: Icon(
-        FontAwesomeIcons.clipboardList,
-        size: maxWidth * 0.1,
+      child: Container(
+        width: maxWidth * 0.12,
+        child: Assets.images.dinnerIcon.image(),
       ),
     );
   }

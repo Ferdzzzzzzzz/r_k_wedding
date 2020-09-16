@@ -10,6 +10,8 @@ class $AssetsImagesGen {
 
   AssetGenImage get circleLauncher =>
       const AssetGenImage('assets/images/circle_launcher.png');
+  AssetGenImage get dinnerIcon =>
+      const AssetGenImage('assets/images/dinner_icon.png');
   AssetGenImage get icon => const AssetGenImage('assets/images/icon.png');
   AssetGenImage get lion => const AssetGenImage('assets/images/lion.png');
   AssetGenImage get lionBlack =>
@@ -21,6 +23,8 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/springbok_black.png');
   AssetGenImage get tableMountain =>
       const AssetGenImage('assets/images/table_mountain.png');
+  AssetGenImage get wineIcon =>
+      const AssetGenImage('assets/images/wine_icon.png');
 }
 
 class Assets {

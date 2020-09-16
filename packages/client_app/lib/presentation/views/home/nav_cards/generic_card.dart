@@ -8,8 +8,9 @@ import 'package:google_fonts/google_fonts.dart';
 class GenericCard extends StatelessWidget {
   final Widget child;
   final String title;
+  final VoidCallback onTap;
 
-  const GenericCard(this.child, this.title);
+  const GenericCard(this.child, this.title, this.onTap);
 
   @override
   Widget build(BuildContext context) {
@@ -25,24 +26,33 @@ class GenericCard extends StatelessWidget {
           color: ColorName.lightGrey,
           boxShadow: materialBoxShadow,
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Expanded(
-              child: child,
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            customBorder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: maxH * 0.02),
-              child: AutoSizeText(
-                title,
-                maxLines: 1,
-                style: GoogleFonts.roboto(
-                  fontWeight: FontWeight.w500,
-                  color: ColorName.darkGreen,
+            onTap: onTap,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Expanded(
+                  child: child,
                 ),
-              ),
-            )
-          ],
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: maxH * 0.02),
+                  child: AutoSizeText(
+                    title,
+                    maxLines: 1,
+                    style: GoogleFonts.roboto(
+                      fontWeight: FontWeight.w500,
+                      color: ColorName.darkGreen,
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );

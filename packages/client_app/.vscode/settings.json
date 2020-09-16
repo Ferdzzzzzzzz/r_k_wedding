@@ -1,15 +1,13 @@
 {
     "files.exclude": {
         "**/.git": true,
-        "**/.gitignore": true,
+        // "**/.gitignore": true,
         "**/.metadata": true,
         "**/.packages": true,
-	"**/lib/gen",
         "**/.flutter-plugins": true,
         "**/build": true,
-        "**/.vscode": true,
         "**/.flutter-plugins-dependencies": true,
-	"**/lib/gen" : true,
+	    "**/lib/gen" : true,
         "**/client_app.iml": true,
         "**/flutter_01.log": true,
         "**/pubspec.lock": true,

@@ -13,7 +13,11 @@ class RSVPCard extends StatelessWidget {
         -maxWidth * 0,
         0,
       ),
-      child: GenericCard(_renderBody(context), 'rsvp'),
+      child: GenericCard(
+        _renderBody(context),
+        'rsvp',
+        () => print('rsvp'),
+      ),
     );
   }
 
@@ -22,7 +26,7 @@ class RSVPCard extends StatelessWidget {
 
     return Center(
       child: Icon(
-        FontAwesomeIcons.envelope,
+        FontAwesomeIcons.solidEnvelope,
         size: maxWidth * 0.1,
       ),
     );

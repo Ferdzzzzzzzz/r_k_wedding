@@ -9,4 +9,7 @@
     <color name="lightPink">#F1E8E3</color>
     <color name="blueGrey">#eceff1</color>
     <color name="lightGrey">#fafafa</color>
+    <color name="blueGreen">#466470</color>
+    <color name="warningRed">#7A162B</color>
+    <color name="darkGrey">#8E8E96</color>
 </resources>

@@ -1,7 +1,7 @@
 import 'package:client_app/application/auth/auth_state/auth_cubit.dart';
 import 'package:client_app/gen/colors.gen.dart';
 import 'package:client_app/presentation/views/home/nav_cards/bed_card.dart';
-import 'package:client_app/presentation/views/home/nav_cards/generic_card.dart';
+import 'package:client_app/presentation/views/home/nav_cards/restaurant_card.dart';
 import 'package:client_app/presentation/views/home/nav_cards/rsvp_card.dart';
 import 'package:client_app/presentation/views/home/nav_cards/schedule_card.dart';
 import 'package:client_app/presentation/views/home/nav_cards/sign_out_card.dart';
@@ -15,10 +15,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'nav_cards/lions_card.dart';
 import 'nav_cards/mountain_card.dart';
+import 'nav_cards/venue_card.dart';
 
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final maxH = context.mediaQuerySize.height;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -49,11 +52,13 @@ class HomeView extends StatelessWidget {
           GridView.count(
             crossAxisCount: 2,
             children: [
+              VenueCard(),
               RSVPCard(),
               ScheduleCard(),
               LionsCard(),
-              BedCard(),
               WineCard(),
+              RestaurantCard(),
+              BedCard(),
               MountainCard(),
               SignOutCard(),
             ],

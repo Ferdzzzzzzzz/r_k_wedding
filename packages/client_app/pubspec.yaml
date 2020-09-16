@@ -57,7 +57,7 @@ flutter_icons:
 
 # flutter pub pub run flutter_native_splash:create
 flutter_native_splash:
-  image: assets/images/splash.png
+  image: assets/images/splash_v2.png
   color: "FFFFFF"
 
 flutter_gen:

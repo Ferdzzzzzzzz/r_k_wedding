@@ -28,7 +28,7 @@ class SignInForm extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: maxWidth * 0.1,
-        vertical: maxHeight * 0.2,
+        vertical: maxHeight * 0.25,
       ),
       child: Container(
         height: maxHeight * 0.4,
