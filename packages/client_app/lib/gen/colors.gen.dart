@@ -9,10 +9,13 @@ import 'package:flutter/material.dart';
 class ColorName {
   ColorName._();
 
-  static const Color eDarkGreen = Color(0xFF0E2D24);
-  static const Color eDarkerBrown = Color(0xFFB1A9A5);
-  static const Color eLightBrown = Color(0xFFD8CFCB);
-  static const Color eLightGreen = Color(0xFF6D8474);
-  static const Color eLighterGreen = Color(0xFFBEC9C6);
-  static const Color eMediumGreen = Color(0xFF2B4B40);
+  static const Color blueGrey = Color(0xFFECEFF1);
+  static const Color darkGreen = Color(0xFF0E2D24);
+  static const Color darkerBrown = Color(0xFFB1A9A5);
+  static const Color lightBrown = Color(0xFFD8CFCB);
+  static const Color lightGreen = Color(0xFF6D8474);
+  static const Color lightGrey = Color(0xFFFAFAFA);
+  static const Color lightPink = Color(0xFFF1E8E3);
+  static const Color lighterGreen = Color(0xFFBEC9C6);
+  static const Color mediumGreen = Color(0xFF2B4B40);
 }

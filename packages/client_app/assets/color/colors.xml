@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="eDarkGreen">#0E2D24</color>
-    <color name="eMediumGreen">#2B4B40</color>
-    <color name="eLightGreen">#6D8474</color>
-    <color name="eLighterGreen">#BEC9C6</color>
-    <color name="eLightBrown">#D8CFCB</color>
-    <color name="eDarkerBrown">#B1A9A5</color>    
+    <color name="darkGreen">#0E2D24</color>
+    <color name="mediumGreen">#2B4B40</color>
+    <color name="lightGreen">#6D8474</color>
+    <color name="lighterGreen">#BEC9C6</color>
+    <color name="lightBrown">#D8CFCB</color>
+    <color name="darkerBrown">#B1A9A5</color>
+    <color name="lightPink">#F1E8E3</color>
+    <color name="blueGrey">#eceff1</color>
+    <color name="lightGrey">#fafafa</color>
 </resources>

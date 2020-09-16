@@ -9,6 +9,7 @@
         "**/build": true,
         "**/.vscode": true,
         "**/.flutter-plugins-dependencies": true,
+	"**/lib/gen" : true,
         "**/client_app.iml": true,
         "**/flutter_01.log": true,
         "**/pubspec.lock": true,

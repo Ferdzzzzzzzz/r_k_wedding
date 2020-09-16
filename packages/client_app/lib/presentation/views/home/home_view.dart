@@ -1,10 +1,20 @@
 import 'package:client_app/application/auth/auth_state/auth_cubit.dart';
 import 'package:client_app/gen/colors.gen.dart';
+import 'package:client_app/presentation/views/home/nav_cards/bed_card.dart';
+import 'package:client_app/presentation/views/home/nav_cards/generic_card.dart';
+import 'package:client_app/presentation/views/home/nav_cards/rsvp_card.dart';
+import 'package:client_app/presentation/views/home/nav_cards/schedule_card.dart';
+import 'package:client_app/presentation/views/home/nav_cards/sign_out_card.dart';
+import 'package:client_app/presentation/views/home/nav_cards/wine_card.dart';
+import 'package:client_app/presentation/views/sign_in/widgets/sign_in_form_background_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:build_context/build_context.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'nav_cards/lions_card.dart';
+import 'nav_cards/mountain_card.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -13,37 +23,52 @@ class HomeView extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          Column(
-            children: [
-              _renderColor(context, ColorName.eDarkerBrown),
-              _renderColor(context, ColorName.eLightBrown),
-              _renderColor(context, ColorName.eLighterGreen),
-              _renderColor(context, ColorName.eLightGreen),
-              _renderColor(context, ColorName.eMediumGreen),
-              _renderColor(context, ColorName.eDarkGreen),
-            ],
-          ),
-          Center(
-            child: Container(
-              height: 100,
-              width: 200,
-              child: MaterialButton(
-                color: ColorName.eLightBrown,
-                onPressed: () {
-                  final authCubit = context.bloc<AuthCubit>();
-                  authCubit.signOut();
-                },
-                child: Center(
-                  child: Text(
-                    "LogOut",
-                    style: GoogleFonts.roboto(
-                      color: Colors.white,
+          SignInFormBackGroundAnimation(),
+          if (false)
+            Center(
+              child: Container(
+                height: 100,
+                width: 200,
+                child: MaterialButton(
+                  color: ColorName.lightBrown,
+                  onPressed: () {
+                    final authCubit = context.bloc<AuthCubit>();
+                    authCubit.signOut();
+                  },
+                  child: Center(
+                    child: Text(
+                      "LogOut",
+                      style: GoogleFonts.roboto(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
+          GridView.count(
+            crossAxisCount: 2,
+            children: [
+              RSVPCard(),
+              ScheduleCard(),
+              LionsCard(),
+              BedCard(),
+              WineCard(),
+              MountainCard(),
+              SignOutCard(),
+            ],
           ),
+          if (false)
+            Column(
+              children: [
+                _renderColor(context, ColorName.darkerBrown),
+                _renderColor(context, ColorName.lightBrown),
+                _renderColor(context, ColorName.lighterGreen),
+                _renderColor(context, ColorName.lightGreen),
+                _renderColor(context, ColorName.mediumGreen),
+                _renderColor(context, ColorName.darkGreen),
+              ],
+            ),
           if (false)
             Center(
               child: GridView.count(

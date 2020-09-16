@@ -38,6 +38,7 @@ class SignInFormCubit extends Cubit<SignInFormState> {
       emit(_submittingState(state));
 
       final failureOrSuccess = await _emailPasswordSignIn();
+
       emit(_mapAuthResultToState(failureOrSuccess));
     }
   }

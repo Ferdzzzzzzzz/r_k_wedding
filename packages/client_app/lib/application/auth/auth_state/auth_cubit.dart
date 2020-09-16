@@ -18,6 +18,10 @@ class AuthCubit extends Cubit<AuthState> {
     ));
   }
 
+  Future<void> isAuthenticated() async {
+    emit(const AuthState.authenticated());
+  }
+
   Future<void> signOut() async {
     await _authFacade.signOut();
     emit(const AuthState.notAuthenticated());
