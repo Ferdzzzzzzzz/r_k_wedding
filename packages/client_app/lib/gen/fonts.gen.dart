@@ -7,4 +7,5 @@ class FontFamily {
   FontFamily._();
 
   static const String castellar = 'Castellar';
+  static const String weddingApp = 'WeddingApp';
 }

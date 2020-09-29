@@ -9,21 +9,36 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../views/activities/activities_view.dart';
+import '../views/bed/bed_view.dart';
 import '../views/home/home_view.dart';
+import '../views/lions/lions_view.dart';
 import '../views/restaurants/restaurants_view.dart';
 import '../views/rsvp/rsvp_view.dart';
+import '../views/schedule/schedule_view.dart';
+import '../views/venue/venue_view.dart';
 import '../views/wine_farms/wine_farm_view.dart';
 
 class Routes {
   static const String homeView = '/';
-  static const String rsvp = '/rsvp-view';
-  static const String restaurant = '/restaurant-view';
-  static const String wineFarm = '/wine-farm-view';
+  static const String venueView = '/venue-view';
+  static const String lionsView = '/lions-view';
+  static const String activitiesView = '/activities-view';
+  static const String scheduleView = '/schedule-view';
+  static const String bedView = '/bed-view';
+  static const String rsvpView = '/rsvp-view';
+  static const String restaurantView = '/restaurant-view';
+  static const String wineFarmView = '/wine-farm-view';
   static const all = <String>{
     homeView,
-    rsvp,
-    restaurant,
-    wineFarm,
+    venueView,
+    lionsView,
+    activitiesView,
+    scheduleView,
+    bedView,
+    rsvpView,
+    restaurantView,
+    wineFarmView,
   };
 }
 
@@ -32,34 +47,71 @@ class Router extends RouterBase {
   List<RouteDef> get routes => _routes;
   final _routes = <RouteDef>[
     RouteDef(Routes.homeView, page: HomeView),
-    RouteDef(Routes.rsvp, page: RsvpView),
-    RouteDef(Routes.restaurant, page: RestaurantView),
-    RouteDef(Routes.wineFarm, page: WineFarmView),
+    RouteDef(Routes.venueView, page: VenueView),
+    RouteDef(Routes.lionsView, page: LionsView),
+    RouteDef(Routes.activitiesView, page: ActivitiesView),
+    RouteDef(Routes.scheduleView, page: ScheduleView),
+    RouteDef(Routes.bedView, page: BedView),
+    RouteDef(Routes.rsvpView, page: RsvpView),
+    RouteDef(Routes.restaurantView, page: RestaurantView),
+    RouteDef(Routes.wineFarmView, page: WineFarmView),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, AutoRouteFactory>{
     HomeView: (data) {
-      return MaterialPageRoute<Widget>(
-        builder: (context) => HomeView(),
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) => HomeView(),
+        settings: data,
+      );
+    },
+    VenueView: (data) {
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) => VenueView(),
+        settings: data,
+      );
+    },
+    LionsView: (data) {
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) => LionsView(),
+        settings: data,
+      );
+    },
+    ActivitiesView: (data) {
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) =>
+            ActivitiesView(),
+        settings: data,
+      );
+    },
+    ScheduleView: (data) {
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) => ScheduleView(),
+        settings: data,
+      );
+    },
+    BedView: (data) {
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) => BedView(),
         settings: data,
       );
     },
     RsvpView: (data) {
-      return MaterialPageRoute<Widget>(
-        builder: (context) => RsvpView(),
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) => RsvpView(),
         settings: data,
       );
     },
     RestaurantView: (data) {
-      return MaterialPageRoute<Widget>(
-        builder: (context) => RestaurantView(),
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) =>
+            RestaurantView(),
         settings: data,
       );
     },
     WineFarmView: (data) {
-      return MaterialPageRoute<Widget>(
-        builder: (context) => WineFarmView(),
+      return PageRouteBuilder<Widget>(
+        pageBuilder: (context, animation, secondaryAnimation) => WineFarmView(),
         settings: data,
       );
     },

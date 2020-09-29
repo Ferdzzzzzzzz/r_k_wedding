@@ -1,4 +1,4 @@
-import 'package:client_app/core/failures/value_failures.dart';
+import 'package:wedding_app/core/failures/value_failures.dart';
 
 class NotAuthenticatedError extends Error {}
 

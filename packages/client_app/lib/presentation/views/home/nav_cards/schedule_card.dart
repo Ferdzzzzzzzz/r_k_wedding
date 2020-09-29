@@ -1,12 +1,14 @@
-import 'package:client_app/presentation/views/home/nav_cards/generic_card.dart';
+import 'package:wedding_app/presentation/core/wedding_app_icons.dart';
+import 'package:wedding_app/presentation/routes/router.gr.dart';
+import 'package:wedding_app/presentation/views/home/nav_cards/generic_card.dart';
 import 'package:flutter/material.dart';
-import 'package:build_context/build_context.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:wedding_app/core/extensions/x_context.dart';
+import 'package:auto_route/auto_route.dart';
 
 class ScheduleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final maxWidth = context.mediaQuerySize.width;
+    final maxWidth = context.maxWidth;
 
     return Transform.translate(
       offset: Offset(
@@ -15,19 +17,20 @@ class ScheduleCard extends StatelessWidget {
       ),
       child: GenericCard(
         _renderBody(context),
-        'schedule',
-        () => print('schedule'),
+        'Order of the Day',
+        () => context.navigator.push(Routes.scheduleView),
       ),
     );
   }
 
   Widget _renderBody(BuildContext context) {
-    final maxWidth = context.mediaQuerySize.width;
+    final maxWidth = context.maxWidth;
 
     return Center(
       child: Icon(
-        FontAwesomeIcons.clipboardList,
-        size: maxWidth * 0.1,
+        WeddingAppIcons.orderOfDayIcon,
+        size: maxWidth * 0.15,
+        color: Colors.white,
       ),
     );
   }

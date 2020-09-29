@@ -8,7 +8,7 @@ final materialBoxShadow = [
         .withLightness(0.54)
         .withAlpha(.2)
         .toColor(),
-    offset: const Offset(0, 3),
-    blurRadius: 6,
+    offset: const Offset(0, 2),
+    blurRadius: 8,
   ),
 ];

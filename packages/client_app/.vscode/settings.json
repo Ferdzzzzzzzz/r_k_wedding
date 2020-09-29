@@ -20,7 +20,7 @@
         "**/*.freezed.dart": true,
         "**/*.g.dart": true,
         "**/*.gr.dart": true,
-        "**/*.config.dart": true
+        "**/*.config.dart": false
     },
     "explorerExclude.backup": null
 }

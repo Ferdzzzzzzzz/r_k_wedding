@@ -1,6 +1,7 @@
-import 'package:client_app/presentation/views/home/nav_cards/generic_card.dart';
+import 'package:wedding_app/presentation/core/side_effects/snack_bar_helpers.dart';
+import 'package:wedding_app/presentation/views/home/nav_cards/generic_card.dart';
 import 'package:flutter/material.dart';
-import 'package:build_context/build_context.dart';
+import 'package:wedding_app/core/extensions/x_context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class VenueCard extends StatelessWidget {
@@ -8,18 +9,22 @@ class VenueCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GenericCard(
       _renderBody(context),
-      'venue',
-      () => print('venue'),
+      'Venue',
+      () {
+        // context.navigator.push(Routes.venueView);
+        snackBarError(context, message: "Network Connection Error");
+      },
     );
   }
 
   Widget _renderBody(BuildContext context) {
-    final maxWidth = context.mediaQuerySize.width;
+    final maxWidth = context.maxWidth;
 
     return Center(
       child: Icon(
         FontAwesomeIcons.mapSigns,
-        size: maxWidth * 0.1,
+        size: maxWidth * 0.12,
+        color: Colors.white,
       ),
     );
   }

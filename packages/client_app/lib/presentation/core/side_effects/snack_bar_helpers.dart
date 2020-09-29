@@ -1,4 +1,4 @@
-import 'package:client_app/gen/colors.gen.dart';
+import 'package:wedding_app/gen/colors.gen.dart';
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ Future<dynamic> snackBarError(
     title: title,
     backgroundColor: ColorName.darkGrey,
     message: message,
-    icon: Icon(
+    icon: const Icon(
       Icons.warning,
       size: 28.0,
       color: ColorName.warningRed,

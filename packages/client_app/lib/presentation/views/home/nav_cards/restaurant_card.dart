@@ -1,12 +1,14 @@
-import 'package:client_app/gen/assets.gen.dart';
-import 'package:client_app/presentation/views/home/nav_cards/generic_card.dart';
+import 'package:wedding_app/presentation/core/wedding_app_icons.dart';
+import 'package:wedding_app/presentation/routes/router.gr.dart';
+import 'package:wedding_app/presentation/views/home/nav_cards/generic_card.dart';
 import 'package:flutter/material.dart';
-import 'package:build_context/build_context.dart';
+import 'package:wedding_app/core/extensions/x_context.dart';
+import 'package:auto_route/auto_route.dart';
 
 class RestaurantCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final maxWidth = context.mediaQuerySize.width;
+    final maxWidth = context.maxWidth;
 
     return Transform.translate(
       offset: Offset(
@@ -15,20 +17,19 @@ class RestaurantCard extends StatelessWidget {
       ),
       child: GenericCard(
         _renderBody(context),
-        'restaurants',
-        () => print('eat'),
+        'Restaurants',
+        () => context.navigator.push(Routes.restaurantView),
       ),
     );
   }
 
   Widget _renderBody(BuildContext context) {
-    final maxWidth = context.mediaQuerySize.width;
+    final maxWidth = context.maxWidth;
 
-    return Center(
-      child: Container(
-        width: maxWidth * 0.12,
-        child: Assets.images.dinnerIcon.image(),
-      ),
+    return Icon(
+      WeddingAppIcons.restaurantIcon,
+      color: Colors.white,
+      size: maxWidth * 0.15,
     );
   }
 }

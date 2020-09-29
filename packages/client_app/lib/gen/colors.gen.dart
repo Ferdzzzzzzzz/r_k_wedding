@@ -20,5 +20,6 @@ class ColorName {
   static const Color lightPink = Color(0xFFF1E8E3);
   static const Color lighterGreen = Color(0xFFBEC9C6);
   static const Color mediumGreen = Color(0xFF2B4B40);
+  static const Color navyBlue = Color(0xFF202A4B);
   static const Color warningRed = Color(0xFF7A162B);
 }

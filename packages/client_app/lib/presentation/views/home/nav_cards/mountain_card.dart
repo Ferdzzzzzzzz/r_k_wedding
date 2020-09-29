@@ -1,25 +1,29 @@
-import 'package:client_app/gen/assets.gen.dart';
-import 'package:client_app/presentation/views/home/nav_cards/generic_card.dart';
+import 'package:wedding_app/gen/assets.gen.dart';
+import 'package:wedding_app/presentation/routes/router.gr.dart';
+import 'package:wedding_app/presentation/views/home/nav_cards/generic_card.dart';
 import 'package:flutter/material.dart';
-import 'package:build_context/build_context.dart';
+import 'package:wedding_app/core/extensions/x_context.dart';
+import 'package:auto_route/auto_route.dart';
 
 class MountainCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GenericCard(
       _renderBody(context),
-      'activities',
-      () => print('activities'),
+      'Activities',
+      () => context.navigator.push(Routes.activitiesView),
     );
   }
 
   Widget _renderBody(BuildContext context) {
-    final maxWidth = context.mediaQuerySize.width;
+    final maxWidth = context.maxWidth;
 
     return Center(
-      child: Container(
+      child: SizedBox(
         width: maxWidth * 0.28,
-        child: Assets.images.tableMountain.image(),
+        child: Assets.images.tableMountain.image(
+          color: Colors.white,
+        ),
       ),
     );
   }
