@@ -1,6 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:wedding_app/gen/assets.gen.dart';
+import 'package:wedding_app/gen/colors.gen.dart';
 import 'package:wedding_app/presentation/core/side_effects/snack_bar_helpers.dart';
 import 'package:wedding_app/presentation/views/home/nav_cards/bed_card.dart';
 import 'package:wedding_app/presentation/views/home/nav_cards/restaurant_card.dart';
@@ -34,10 +34,10 @@ class HomeView extends HookWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _renderRow(VenueCard(), RSVPCard()),
-          _renderRow(ScheduleCard(), LionsCard()),
-          _renderRow(WineCard(), RestaurantCard()),
-          _renderRow(BedCard(), MountainCard()),
+          _renderRow(VenueCard(), ScheduleCard()),
+          _renderRow(RSVPCard(), BedCard()),
+          _renderRow(LionsCard(), RestaurantCard()),
+          _renderRow(WineCard(), MountainCard()),
         ],
       ),
     );
@@ -66,7 +66,7 @@ class HomeView extends HookWidget {
         child: Container(
           width: context.maxWidth,
           height: context.maxHeight,
-          color: Hexcolor('FAFAFA'),
+          color: ColorName.lightGrey,
         ),
       ),
     );

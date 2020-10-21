@@ -13,6 +13,7 @@ class ColorName {
   static const Color blueGrey = Color(0xFFECEFF1);
   static const Color darkGreen = Color(0xFF0E2D24);
   static const Color darkGrey = Color(0xFF8E8E96);
+  static const Color darkPurple = Color(0xFF522142);
   static const Color darkerBrown = Color(0xFFB1A9A5);
   static const Color lightBrown = Color(0xFFD8CFCB);
   static const Color lightGreen = Color(0xFF6D8474);

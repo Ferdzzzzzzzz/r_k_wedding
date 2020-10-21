@@ -9,6 +9,7 @@ part of 'value_failures.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ValueFailureTearOff {
   const _$ValueFailureTearOff();
 
@@ -34,9 +35,11 @@ class _$ValueFailureTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ValueFailure = _$ValueFailureTearOff();
 
+/// @nodoc
 mixin _$ValueFailure<T> {
   String get failedValue;
 
@@ -70,6 +73,7 @@ mixin _$ValueFailure<T> {
   $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
@@ -77,6 +81,7 @@ abstract class $ValueFailureCopyWith<T, $Res> {
   $Res call({String failedValue});
 }
 
+/// @nodoc
 class _$ValueFailureCopyWithImpl<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   _$ValueFailureCopyWithImpl(this._value, this._then);
@@ -96,6 +101,7 @@ class _$ValueFailureCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 abstract class $InvalidEmailCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $InvalidEmailCopyWith(
@@ -105,6 +111,7 @@ abstract class $InvalidEmailCopyWith<T, $Res>
   $Res call({String failedValue});
 }
 
+/// @nodoc
 class _$InvalidEmailCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $InvalidEmailCopyWith<T, $Res> {
@@ -126,6 +133,7 @@ class _$InvalidEmailCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidEmail<T>
     with DiagnosticableTreeMixin
     implements InvalidEmail<T> {
@@ -232,6 +240,7 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $ShortPasswordCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $ShortPasswordCopyWith(
@@ -241,6 +250,7 @@ abstract class $ShortPasswordCopyWith<T, $Res>
   $Res call({String failedValue});
 }
 
+/// @nodoc
 class _$ShortPasswordCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $ShortPasswordCopyWith<T, $Res> {
@@ -262,6 +272,7 @@ class _$ShortPasswordCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$ShortPassword<T>
     with DiagnosticableTreeMixin
     implements ShortPassword<T> {
@@ -368,6 +379,7 @@ abstract class ShortPassword<T> implements ValueFailure<T> {
   $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $InvalidPasswordCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $InvalidPasswordCopyWith(
@@ -377,6 +389,7 @@ abstract class $InvalidPasswordCopyWith<T, $Res>
   $Res call({String failedValue});
 }
 
+/// @nodoc
 class _$InvalidPasswordCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $InvalidPasswordCopyWith<T, $Res> {
@@ -398,6 +411,7 @@ class _$InvalidPasswordCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidPassword<T>
     with DiagnosticableTreeMixin
     implements InvalidPassword<T> {

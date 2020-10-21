@@ -7,7 +7,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ruben & Katie',
-      home: ExtendedNavigator(router: Router()),
+      home: ExtendedNavigator(router: AppRouter()),
     );
   }
 }

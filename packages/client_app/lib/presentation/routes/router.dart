@@ -25,4 +25,4 @@ import 'package:flutter/material.dart';
     CustomRoute<Widget>(page: WineFarmView),
   ],
 )
-class $Router {}
+class $AppRouter {}

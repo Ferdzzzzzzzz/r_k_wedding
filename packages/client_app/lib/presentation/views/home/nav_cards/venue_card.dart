@@ -1,8 +1,9 @@
-import 'package:wedding_app/presentation/core/side_effects/snack_bar_helpers.dart';
+import 'package:wedding_app/presentation/routes/router.gr.dart';
 import 'package:wedding_app/presentation/views/home/nav_cards/generic_card.dart';
 import 'package:flutter/material.dart';
 import 'package:wedding_app/core/extensions/x_context.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:auto_route/auto_route.dart';
 
 class VenueCard extends StatelessWidget {
   @override
@@ -11,8 +12,7 @@ class VenueCard extends StatelessWidget {
       _renderBody(context),
       'Venue',
       () {
-        // context.navigator.push(Routes.venueView);
-        snackBarError(context, message: "Network Connection Error");
+        context.navigator.push(Routes.venueView);
       },
     );
   }

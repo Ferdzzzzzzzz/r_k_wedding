@@ -9,6 +9,7 @@ part of 'network_failures.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$NetworkFailureTearOff {
   const _$NetworkFailureTearOff();
 
@@ -23,9 +24,11 @@ class _$NetworkFailureTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $NetworkFailure = _$NetworkFailureTearOff();
 
+/// @nodoc
 mixin _$NetworkFailure {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -51,12 +54,14 @@ mixin _$NetworkFailure {
   });
 }
 
+/// @nodoc
 abstract class $NetworkFailureCopyWith<$Res> {
   factory $NetworkFailureCopyWith(
           NetworkFailure value, $Res Function(NetworkFailure) then) =
       _$NetworkFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$NetworkFailureCopyWithImpl<$Res>
     implements $NetworkFailureCopyWith<$Res> {
   _$NetworkFailureCopyWithImpl(this._value, this._then);
@@ -66,12 +71,14 @@ class _$NetworkFailureCopyWithImpl<$Res>
   final $Res Function(NetworkFailure) _then;
 }
 
+/// @nodoc
 abstract class $ConnectionFailureCopyWith<$Res> {
   factory $ConnectionFailureCopyWith(
           ConnectionFailure value, $Res Function(ConnectionFailure) then) =
       _$ConnectionFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ConnectionFailureCopyWithImpl<$Res>
     extends _$NetworkFailureCopyWithImpl<$Res>
     implements $ConnectionFailureCopyWith<$Res> {
@@ -83,6 +90,7 @@ class _$ConnectionFailureCopyWithImpl<$Res>
   ConnectionFailure get _value => super._value as ConnectionFailure;
 }
 
+/// @nodoc
 class _$ConnectionFailure implements ConnectionFailure {
   const _$ConnectionFailure();
 
@@ -154,12 +162,14 @@ abstract class ConnectionFailure implements NetworkFailure {
   const factory ConnectionFailure() = _$ConnectionFailure;
 }
 
+/// @nodoc
 abstract class $ServerFailureCopyWith<$Res> {
   factory $ServerFailureCopyWith(
           ServerFailure value, $Res Function(ServerFailure) then) =
       _$ServerFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ServerFailureCopyWithImpl<$Res>
     extends _$NetworkFailureCopyWithImpl<$Res>
     implements $ServerFailureCopyWith<$Res> {
@@ -171,6 +181,7 @@ class _$ServerFailureCopyWithImpl<$Res>
   ServerFailure get _value => super._value as ServerFailure;
 }
 
+/// @nodoc
 class _$ServerFailure implements ServerFailure {
   const _$ServerFailure();
 
