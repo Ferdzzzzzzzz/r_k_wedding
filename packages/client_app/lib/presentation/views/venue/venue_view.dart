@@ -24,7 +24,7 @@ class VenueView extends StatelessWidget {
           _renderSSpacer(context),
           _renderTitle(context, "Molenvliet Vineyards:"),
           _renderSlider(context),
-          _renderLSpacer(context),
+          _renderSSpacer(context),
           _renderTitle(context, "Location:"),
           _renderSSpacer(context),
           _renderMap(context),
@@ -201,11 +201,11 @@ class VenueView extends StatelessWidget {
   }
 
   Widget _renderLSpacer(BuildContext context) {
-    return SizedBox(height: context.maxHeight * 0.1);
+    return SizedBox(height: context.maxHeight * 0.05);
   }
 
   Widget _renderSSpacer(BuildContext context) {
-    return SizedBox(height: context.maxHeight * 0.05);
+    return SizedBox(height: context.maxHeight * 0.02);
   }
 }
 
