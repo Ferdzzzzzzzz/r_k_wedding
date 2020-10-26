@@ -23,7 +23,6 @@ class VenueView extends StatelessWidget {
         children: [
           _renderSSpacer(context),
           _renderTitle(context, "Molenvliet Vineyards:"),
-          _renderSSpacer(context),
           _renderSlider(context),
           _renderLSpacer(context),
           _renderTitle(context, "Location:"),
@@ -65,16 +64,23 @@ class VenueView extends StatelessWidget {
 
   Widget _renderSlider(BuildContext context) {
     return CarouselSlider(
-      options: CarouselOptions(height: 400.0),
+      options: CarouselOptions(
+        enableInfiniteScroll: false,
+      ),
       items: [
-        Assets.images.molenvliet.m1,
-        Assets.images.molenvliet.m2,
-        Assets.images.molenvliet.m3,
-        Assets.images.molenvliet.m4,
+        Assets.images.molenvliet.m1.image(),
+        Assets.images.molenvliet.m2.image(),
+        Assets.images.molenvliet.m3.image(),
+        Assets.images.molenvliet.m4.image(),
       ].map((i) {
         return Builder(
-          builder: (BuildContext context) {
-            return i.image();
+          builder: (context) {
+            return Container(
+              margin: EdgeInsets.only(
+                right: context.maxWidth * 0.05,
+              ),
+              child: Center(child: i),
+            );
           },
         );
       }).toList(),

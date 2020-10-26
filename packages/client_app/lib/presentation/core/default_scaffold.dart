@@ -89,11 +89,11 @@ class DefaultScaffold extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(Assets.images.homeBg.path),
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
         ),
       ),
       child: Opacity(
-        opacity: 0.5,
+        opacity: 0.9,
         child: Container(
           width: context.maxWidth,
           height: context.maxHeight,
