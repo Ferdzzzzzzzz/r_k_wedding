@@ -12,9 +12,26 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/circle_launcher.png');
   AssetGenImage get homeBg => const AssetGenImage('assets/images/home_bg.png');
   AssetGenImage get icon => const AssetGenImage('assets/images/icon.png');
+  AssetGenImage get map => const AssetGenImage('assets/images/map.jpg');
+  $AssetsImagesMolenvlietGen get molenvliet =>
+      const $AssetsImagesMolenvlietGen();
   AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
   AssetGenImage get tableMountain =>
       const AssetGenImage('assets/images/table_mountain.png');
+  AssetGenImage get venue => const AssetGenImage('assets/images/venue.jpg');
+}
+
+class $AssetsImagesMolenvlietGen {
+  const $AssetsImagesMolenvlietGen();
+
+  AssetGenImage get m1 =>
+      const AssetGenImage('assets/images/molenvliet/m1.png');
+  AssetGenImage get m2 =>
+      const AssetGenImage('assets/images/molenvliet/m2.png');
+  AssetGenImage get m3 =>
+      const AssetGenImage('assets/images/molenvliet/m3.png');
+  AssetGenImage get m4 =>
+      const AssetGenImage('assets/images/molenvliet/m4.png');
 }
 
 class Assets {
