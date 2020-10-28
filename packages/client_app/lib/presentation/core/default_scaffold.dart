@@ -4,6 +4,8 @@ import 'package:wedding_app/gen/assets.gen.dart';
 import 'package:wedding_app/gen/colors.gen.dart';
 import 'package:wedding_app/gen/fonts.gen.dart';
 import 'package:wedding_app/core/extensions/x_context.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:wedding_app/presentation/routes/router.gr.dart';
 
 class DefaultScaffold extends StatelessWidget {
   final String title;
@@ -34,15 +36,33 @@ class DefaultScaffold extends StatelessWidget {
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: <Widget>[
-                  _renderListTile(context, "Home", () {}),
-                  _renderListTile(context, "Venue", () {}),
-                  _renderListTile(context, "Order of the day", () {}),
-                  _renderListTile(context, "rsvp", () {}),
-                  _renderListTile(context, "accomodation", () {}),
-                  _renderListTile(context, "lions tour", () {}),
-                  _renderListTile(context, "restaurants", () {}),
-                  _renderListTile(context, "wine farms", () {}),
-                  _renderListTile(context, "activities", () {}),
+                  _renderListTile(context, "Home", () {
+                    context.navigator.popUntilRoot();
+                  }),
+                  _renderListTile(context, "Venue", () {
+                    context.navigator.replace(Routes.venueView);
+                  }),
+                  _renderListTile(context, "Order of the day", () {
+                    context.navigator.replace(Routes.scheduleView);
+                  }),
+                  _renderListTile(context, "rsvp", () {
+                    context.navigator.replace(Routes.rsvpView);
+                  }),
+                  _renderListTile(context, "accomodation", () {
+                    context.navigator.replace(Routes.bedView);
+                  }),
+                  _renderListTile(context, "lions tour", () {
+                    context.navigator.replace(Routes.lionsView);
+                  }),
+                  _renderListTile(context, "restaurants", () {
+                    context.navigator.replace(Routes.restaurantView);
+                  }),
+                  _renderListTile(context, "wine farms", () {
+                    context.navigator.replace(Routes.wineFarmView);
+                  }),
+                  _renderListTile(context, "activities", () {
+                    context.navigator.replace(Routes.activitiesView);
+                  }),
                 ],
               ),
             ),
@@ -58,29 +78,32 @@ class DefaultScaffold extends StatelessWidget {
     String title,
     VoidCallback ontap,
   ) {
-    return ListTile(
-      title: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AutoSizeText(
-            title,
-            style: const TextStyle(
-              fontFamily: FontFamily.castellar,
-              color: ColorName.lightGreen,
-              fontSize: 20,
-            ),
-            minFontSize: 1,
-            maxFontSize: 20,
-            maxLines: 1,
-          ),
-          const Divider(
-            thickness: 1,
-            height: 0,
-            color: ColorName.lightGreen,
-          ),
-        ],
-      ),
+    return GestureDetector(
       onTap: ontap,
+      child: ListTile(
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AutoSizeText(
+              title,
+              style: const TextStyle(
+                fontFamily: FontFamily.castellar,
+                color: ColorName.lightGreen,
+                fontSize: 20,
+              ),
+              minFontSize: 1,
+              maxFontSize: 20,
+              maxLines: 1,
+            ),
+            const Divider(
+              thickness: 1,
+              height: 0,
+              color: ColorName.lightGreen,
+            ),
+          ],
+        ),
+        onTap: ontap,
+      ),
     );
   }
 
