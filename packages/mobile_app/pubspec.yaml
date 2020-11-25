@@ -1,0 +1,58 @@
+name: mobile_app
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.9.0 <3.0.0"
+
+dependencies:
+  auto_route: ^0.6.9
+  auto_size_text: ^2.1.0
+  flutter:
+    sdk: flutter
+  flutter_hooks: ^0.15.0
+  font_awesome_flutter: ^8.10.0
+
+dev_dependencies:
+  auto_route_generator: ^0.6.10
+  build_runner: ^1.10.6
+  # flutter pub run change_app_package_name:main com.ferdzz.weddingapp
+  change_app_package_name: 0.1.2
+  flutter_launcher_icons: 0.8.1
+  flutter_native_splash: 0.1.9
+  flutter_test:
+    sdk: flutter
+
+  lint: ^1.5.1
+
+# flutter pub run flutter_launcher_icons:main
+flutter_icons:
+  image_path: "assets/images/icon.png"
+  adaptive_icon_foreground: "assets/images/circle_launcher.png"
+  adaptive_icon_background: "#6D8474"
+  android: true
+  ios: true
+
+# flutter pub pub run flutter_native_splash:create
+flutter_native_splash:
+  image: assets/images/splash.png
+  color: "FFFFFF"
+
+flutter_gen:
+  colors:
+    inputs:
+      - assets/color/colors.xml
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/molenvliet/
+  fonts:
+    - family: Castellar
+      fonts:
+        - asset: assets/fonts/CASTELAR.ttf
+    - family: WeddingApp
+      fonts:
+        - asset: assets/fonts/WeddingApp.ttf
