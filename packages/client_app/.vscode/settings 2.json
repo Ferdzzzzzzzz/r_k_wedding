@@ -22,6 +22,5 @@
         "**/*.gr.dart": false,
         "**/*.config.dart": false
     },
-    "explorerExclude.backup": null,
-    "workbench.colorTheme": "Material Theme Lighter High Contrast"
+    "explorerExclude.backup": null
 }

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:build_context/build_context.dart';
-
 extension XContext on BuildContext {
-  double get maxWidth => mediaQuerySize.width;
-
-  double get maxHeight => mediaQuerySize.height;
+  double get maxWidth => MediaQuery.of(this).size.width;
+  double get maxHeight => MediaQuery.of(this).size.height;
 }
