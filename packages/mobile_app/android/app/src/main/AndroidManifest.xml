@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ferdzz.weddingapp">
    <application
-        android:label="mobile_app"
+        android:label="wedding"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

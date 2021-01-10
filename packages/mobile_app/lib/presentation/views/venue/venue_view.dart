@@ -1,11 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_app/presentation/default_scaffold.dart';
+import 'package:wedding/presentation/default_scaffold.dart';
 import 'package:pinch_zoom_image_last/pinch_zoom_image_last.dart';
-import 'package:mobile_app/gen/assets.gen.dart';
-import 'package:mobile_app/gen/fonts.gen.dart';
-import 'package:mobile_app/core/extensions/x_context.dart';
+import 'package:wedding/gen/assets.gen.dart';
+import 'package:wedding/gen/fonts.gen.dart';
+import 'package:wedding/core/extensions/x_context.dart';
 
 class VenueView extends StatelessWidget {
   @override

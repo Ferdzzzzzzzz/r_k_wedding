@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_app/presentation/default_scaffold.dart';
+import 'package:wedding/presentation/default_scaffold.dart';
 
 class BedView extends StatelessWidget {
   @override

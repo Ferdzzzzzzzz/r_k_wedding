@@ -1,8 +1,8 @@
-import 'package:mobile_app/gen/assets.gen.dart';
-import 'package:mobile_app/presentation/router/app_router.gr.dart';
-import 'package:mobile_app/presentation/views/home/nav_cards/generic_card.dart';
+import 'package:wedding/gen/assets.gen.dart';
+import 'package:wedding/presentation/router/app_router.gr.dart';
+import 'package:wedding/presentation/views/home/nav_cards/generic_card.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_app/core/extensions/x_context.dart';
+import 'package:wedding/core/extensions/x_context.dart';
 import 'package:auto_route/auto_route.dart';
 
 class LionsCard extends StatelessWidget {
