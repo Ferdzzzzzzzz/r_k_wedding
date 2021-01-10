@@ -31,7 +31,7 @@ class RSVPCard extends StatelessWidget {
     return Center(
       child: Icon(
         FontAwesomeIcons.solidEnvelope,
-        size: maxWidth * 0.12,
+        size: maxWidth * 0.15,
         color: Colors.white,
       ),
     );

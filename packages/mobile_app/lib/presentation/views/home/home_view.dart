@@ -33,8 +33,8 @@ class HomeView extends HookWidget {
       children: [
         _renderRow(VenueCard(), ScheduleCard()),
         _renderRow(RSVPCard(), BedCard()),
-        _renderRow(LionsCard(), RestaurantCard()),
-        _renderRow(WineCard(), MountainCard()),
+        _renderRow(RestaurantCard(), WineCard()),
+        _renderRow(MountainCard(), LionsCard()),
       ],
     );
   }

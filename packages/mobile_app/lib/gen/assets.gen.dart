@@ -8,6 +8,7 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  AssetGenImage get bed => const AssetGenImage('assets/images/bed.png');
   AssetGenImage get circleLauncher =>
       const AssetGenImage('assets/images/circle_launcher.png');
   AssetGenImage get homeBg => const AssetGenImage('assets/images/home_bg.png');
@@ -15,7 +16,9 @@ class $AssetsImagesGen {
   AssetGenImage get map => const AssetGenImage('assets/images/map.jpg');
   $AssetsImagesMolenvlietGen get molenvliet =>
       const $AssetsImagesMolenvlietGen();
-  AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
+  AssetGenImage get rugbyBall =>
+      const AssetGenImage('assets/images/rugby_ball.png');
+  AssetGenImage get splash => const AssetGenImage('assets/images/splash.jpg');
   AssetGenImage get tableMountain =>
       const AssetGenImage('assets/images/table_mountain.png');
   AssetGenImage get venue => const AssetGenImage('assets/images/venue.jpg');

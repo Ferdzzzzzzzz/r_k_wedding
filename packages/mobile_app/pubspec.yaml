@@ -18,11 +18,13 @@ dependencies:
   flutter_hooks: ^0.15.0
   font_awesome_flutter: ^8.10.0
   freezed_annotation: ^0.12.0
+  http: ^0.12.2
   pinch_zoom_image_last: 0.3.2
   url_launcher: ^5.7.10
 
 dev_dependencies:
   auto_route_generator: ^0.6.10
+  
   build_runner: ^1.10.6
   # flutter pub run change_app_package_name:main com.ferdzz.weddingapp
   change_app_package_name: 0.1.2
@@ -35,7 +37,7 @@ dev_dependencies:
 
 # flutter pub run flutter_launcher_icons:main
 flutter_icons:
-  image_path: "assets/images/icon.png"
+  image_path: "assets/images/splash.jpg"
   adaptive_icon_foreground: "assets/images/circle_launcher.png"
   adaptive_icon_background: "#6D8474"
   android: true
@@ -43,7 +45,7 @@ flutter_icons:
 
 # flutter pub pub run flutter_native_splash:create
 flutter_native_splash:
-  image: assets/images/splash.png
+  image: assets/images/splash.jpg
   color: "FFFFFF"
 
 flutter_gen:

@@ -13,6 +13,7 @@ abstract class RsvpFormState with _$RsvpFormState {
     @required String dietryRequirements,
     @required bool canSubmit,
     @required bool isSubmitting,
+    @required Option<Either<RsvpFailure, Unit>> optionEitherFailureOrUnit,
   }) = _RsvpFormState;
 
   factory RsvpFormState.initial() => RsvpFormState(
@@ -21,5 +22,12 @@ abstract class RsvpFormState with _$RsvpFormState {
         dietryRequirements: "",
         canSubmit: false,
         isSubmitting: false,
+        optionEitherFailureOrUnit: none(),
       );
+}
+
+@freezed
+abstract class RsvpFailure with _$RsvpFailure {
+  const factory RsvpFailure.socket() = SocketFailure;
+  const factory RsvpFailure.format() = FormatFailure;
 }

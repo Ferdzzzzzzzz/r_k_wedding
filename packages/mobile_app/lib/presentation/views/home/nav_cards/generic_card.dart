@@ -14,42 +14,43 @@ class GenericCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final maxW = context.maxWidth;
     final maxH = context.maxHeight;
     return Container(
-      width: maxW * 0.4,
-      height: maxH * 0.2,
+      height: maxH * 0.18,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: ColorName.lightGreen,
         boxShadow: materialBoxShadow,
       ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          customBorder: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          onTap: onTap,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              child,
-              SizedBox(height: maxH * 0.005),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: maxH * 0.02),
-                child: AutoSizeText(
-                  title,
-                  maxLines: 1,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontFamily: FontFamily.castellar,
-                    color: Colors.white,
-                    fontSize: 10,
+      child: AspectRatio(
+        aspectRatio: 2.8 / 3,
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            customBorder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            onTap: onTap,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                child,
+                SizedBox(height: maxH * 0.005),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: maxH * 0.02),
+                  child: AutoSizeText(
+                    title,
+                    maxLines: 1,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontFamily: FontFamily.castellar,
+                      color: Colors.white,
+                      fontSize: 10,
+                    ),
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),
