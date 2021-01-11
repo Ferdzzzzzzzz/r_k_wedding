@@ -16,7 +16,7 @@ class GenericCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final maxH = context.maxHeight;
     return Container(
-      height: maxH * 0.2,
+      height: maxH * 0.18,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: ColorName.lightGreen,

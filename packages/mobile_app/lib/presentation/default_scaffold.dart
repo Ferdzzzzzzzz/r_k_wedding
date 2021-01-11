@@ -10,10 +10,12 @@ import 'package:wedding/presentation/router/app_router.gr.dart';
 class DefaultScaffold extends StatelessWidget {
   final String title;
   final Widget body;
+  final bool inverted;
 
   const DefaultScaffold({
     @required this.title,
     @required this.body,
+    this.inverted = false,
   });
 
   @override
@@ -22,8 +24,8 @@ class DefaultScaffold extends StatelessWidget {
     final paddingTop = context.maxHeight * 0.1;
 
     return Scaffold(
-      backgroundColor: ColorName.lightGreen,
-      appBar: _getAppBar(title),
+      backgroundColor: inverted ? Colors.white : ColorName.lightGreen,
+      appBar: _getAppBar(title, inverted: inverted),
       endDrawer: Drawer(
         child: Stack(
           children: [
@@ -127,15 +129,20 @@ class DefaultScaffold extends StatelessWidget {
   }
 }
 
-AppBar _getAppBar(String title) {
+AppBar _getAppBar(
+  String title, {
+  bool inverted = false,
+}) {
+  final color = inverted ? ColorName.darkGreen : Colors.white;
   return AppBar(
-    backgroundColor: ColorName.lightGreen,
+    backgroundColor: inverted ? Colors.white : ColorName.lightGreen,
     shadowColor: Colors.transparent,
+    iconTheme: IconThemeData(color: color),
     title: AutoSizeText(
       title,
-      style: const TextStyle(
+      style: TextStyle(
         fontFamily: FontFamily.castellar,
-        color: Colors.white,
+        color: color,
         fontSize: 50,
       ),
       minFontSize: 1,

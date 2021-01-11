@@ -7,7 +7,7 @@
         "**/.flutter-plugins": true,
         "**/build": true,
         "**/.flutter-plugins-dependencies": true,
-	    "**/lib/gen" : true,
+	    "**/lib/gen" : false,
         "**/client_app.iml": true,
         "**/flutter_01.log": true,
         "**/pubspec.lock": true,

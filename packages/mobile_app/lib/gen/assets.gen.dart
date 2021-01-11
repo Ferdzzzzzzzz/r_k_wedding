@@ -18,6 +18,8 @@ class $AssetsImagesGen {
       const $AssetsImagesMolenvlietGen();
   AssetGenImage get rugbyBall =>
       const AssetGenImage('assets/images/rugby_ball.png');
+  AssetGenImage get schedule =>
+      const AssetGenImage('assets/images/schedule.png');
   AssetGenImage get splash => const AssetGenImage('assets/images/splash.jpg');
   AssetGenImage get tableMountain =>
       const AssetGenImage('assets/images/table_mountain.png');

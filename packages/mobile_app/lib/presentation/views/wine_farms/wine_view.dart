@@ -1,8 +1,7 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:wedding/gen/assets.gen.dart';
 import 'package:wedding/presentation/default_scaffold.dart';
-import 'package:wedding/gen/fonts.gen.dart';
-import 'package:wedding/core/extensions/x_context.dart';
+import 'package:wedding/presentation/views/wine_farms/wine_farm_tile.dart';
 
 class WineView extends StatelessWidget {
   @override
@@ -17,47 +16,26 @@ class WineView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _renderTitle(context, "Molenvliet"),
-        _renderTitle(context, "Peter Falke"),
-        _renderTitle(context, "Hidden valley"),
-        _renderTitle(context, "Longridge"),
-        _renderTitle(context, "Tokara"),
-        _renderTitle(context, "Bartinney"),
-        _renderTitle(context, "Lanzerac"),
-      ],
-    );
-  }
-
-  Widget _renderTitle(
-    BuildContext context,
-    String title,
-  ) {
-    return _renderPadding(
-      context: context,
-      body: AutoSizeText(
-        title,
-        style: const TextStyle(
-          fontFamily: FontFamily.castellar,
-          color: Colors.white,
-          fontSize: 20,
+        WineFarmTile(
+          title: "Molenvliet",
+          contactInfo: "Tel: +27 79 836 6127",
+          image: Assets.images.bed.image(),
+          openHours:
+              "Private wine tasting will be available on site in the two days prior to the wedding.",
+          website: "molenvliet.co.za",
+          whyWeLoveIt:
+              "The wine tasting room is only open for hotel guests so you get an intimate and personalised experience and no driving home required if you are staying!",
         ),
-        minFontSize: 1,
-        maxFontSize: 20,
-        maxLines: 1,
-      ),
-    );
-  }
 
-  Widget _renderPadding({
-    @required BuildContext context,
-    @required Widget body,
-  }) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: context.maxWidth * 0.08,
-        right: context.maxWidth * 0.08,
-      ),
-      child: body,
+        // WineFarmTile(
+        //   title: "Peter Falke",
+        // ),
+        // WineFarmTitle("Hidden valley"),
+        // WineFarmTitle("Longridge"),
+        // WineFarmTitle("Tokara"),
+        // WineFarmTitle("Bartinney"),
+        // WineFarmTitle("Lanzerac"),
+      ],
     );
   }
 }
