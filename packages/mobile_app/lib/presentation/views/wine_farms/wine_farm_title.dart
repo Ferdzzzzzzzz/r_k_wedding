@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wedding/gen/fonts.gen.dart';
-import 'package:wedding/core/extensions/x_context.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:wedding/core/extensions/x_context.dart';
 
 class WineFarmTitle extends StatelessWidget {
   final String title;
@@ -10,39 +10,27 @@ class WineFarmTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _renderTitle(context, title);
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: context.maxHeight * 0.01),
+      child: _renderTitle(context, title),
+    );
   }
 
   Widget _renderTitle(
     BuildContext context,
     String title,
   ) {
-    return _renderPadding(
-      context: context,
-      body: AutoSizeText(
-        title,
-        style: const TextStyle(
-          fontFamily: FontFamily.castellar,
-          color: Colors.white,
-          fontSize: 20,
-        ),
-        minFontSize: 1,
-        maxFontSize: 20,
-        maxLines: 1,
+    return AutoSizeText(
+      title,
+      style: const TextStyle(
+        fontFamily: FontFamily.castellar,
+        color: Colors.white,
+        fontSize: 25,
       ),
-    );
-  }
-
-  Widget _renderPadding({
-    @required BuildContext context,
-    @required Widget body,
-  }) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: context.maxWidth * 0.08,
-        right: context.maxWidth * 0.08,
-      ),
-      child: body,
+      textAlign: TextAlign.left,
+      minFontSize: 1,
+      maxFontSize: 25,
+      maxLines: 1,
     );
   }
 }

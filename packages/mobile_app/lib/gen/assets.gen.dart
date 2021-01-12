@@ -24,6 +24,7 @@ class $AssetsImagesGen {
   AssetGenImage get tableMountain =>
       const AssetGenImage('assets/images/table_mountain.png');
   AssetGenImage get venue => const AssetGenImage('assets/images/venue.jpg');
+  $AssetsImagesWinefarmsGen get winefarms => const $AssetsImagesWinefarmsGen();
 }
 
 class $AssetsImagesMolenvlietGen {
@@ -37,6 +38,25 @@ class $AssetsImagesMolenvlietGen {
       const AssetGenImage('assets/images/molenvliet/m3.png');
   AssetGenImage get m4 =>
       const AssetGenImage('assets/images/molenvliet/m4.png');
+}
+
+class $AssetsImagesWinefarmsGen {
+  const $AssetsImagesWinefarmsGen();
+
+  AssetGenImage get molenvliet =>
+      const AssetGenImage('assets/images/winefarms/Molenvliet.png');
+  AssetGenImage get peterFalke =>
+      const AssetGenImage('assets/images/winefarms/Peter-Falke.png');
+  AssetGenImage get bartinney =>
+      const AssetGenImage('assets/images/winefarms/bartinney.png');
+  AssetGenImage get hiddenvalley =>
+      const AssetGenImage('assets/images/winefarms/hiddenvalley.png');
+  AssetGenImage get lanz =>
+      const AssetGenImage('assets/images/winefarms/lanz.png');
+  AssetGenImage get longridge =>
+      const AssetGenImage('assets/images/winefarms/longridge.png');
+  AssetGenImage get tokara =>
+      const AssetGenImage('assets/images/winefarms/tokara.png');
 }
 
 class Assets {

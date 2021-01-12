@@ -59,6 +59,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/molenvliet/
+    - assets/images/winefarms/
   fonts:
     - family: Castellar
       fonts:
