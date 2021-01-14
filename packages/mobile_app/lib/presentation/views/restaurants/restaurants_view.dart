@@ -8,7 +8,7 @@ class RestaurantView extends StatelessWidget {
       title: "Restaurants",
       body: Center(
         child: Text(
-          "food",
+          "lunch-dinner vs cpt-winelands",
           style: TextStyle(
             color: Colors.white,
           ),

@@ -82,7 +82,7 @@ class WineView extends StatelessWidget {
             title: "Lanzerac",
             image: Assets.images.winefarms.lanz.image(),
             website: "lanzerac.co.za",
-            contactInfo: "+27 (0)21 887 1132/info@lanzerac.co.za ",
+            contactInfo: "+27 (0)21 887 1132 / info@lanzerac.co.za ",
             openHours:
                 "Monday – Thursday: 10:00 – 17:00 Friday: 10:00 – 20:00 Saturday: 10:00 – 17:00 ",
             whyWeLoveIt:

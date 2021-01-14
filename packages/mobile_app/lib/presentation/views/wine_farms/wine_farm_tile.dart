@@ -111,7 +111,7 @@ class TitleAndText extends StatelessWidget {
       child: RichText(
         text: TextSpan(children: [
           TextSpan(
-            text: "$title:",
+            text: title,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 18,
