@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wedding/application/rsvp_form/rsvp_form_cubit.dart';
 import 'package:wedding/gen/fonts.gen.dart';
 import 'package:wedding/presentation/default_scaffold.dart';
 import 'package:wedding/core/extensions/x_context.dart';
@@ -9,18 +11,23 @@ import 'package:wedding/presentation/views/rsvp/rsvp_form.dart';
 class RsvpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DefaultScaffold(
-      title: "RSVP",
-      body: _renderPadding(
-        context: context,
-        body: _renderBody(context),
+    return BlocProvider(
+      create: (_) => RsvpformCubit(),
+      child: DefaultScaffold(
+        title: "RSVP",
+        body: _renderPadding(
+          context: context,
+          body: SizedBox(
+            width: double.infinity,
+            child: _renderBody(context),
+          ),
+        ),
       ),
     );
   }
 
   Widget _renderBody(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
+    return SingleChildScrollView(
       child: Column(
         children: [
           _renderTitle(context, "Katie & Ruben's Wedding"),
@@ -28,13 +35,14 @@ class RsvpView extends StatelessWidget {
           _renderSubTitle(context, "-24th JULY 2021-"),
           _renderSSpacer(context),
           RsvpForm(),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                _renderSubTitle(context, "-PLEASE RSVP BY 2nd JUNE 2021-")
-              ],
-            ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              SizedBox(
+                height: context.maxHeight * 0.1,
+              ),
+              _renderSubTitle(context, "-PLEASE RSVP BY 2nd JUNE 2021-")
+            ],
           ),
         ],
       ),
@@ -97,7 +105,6 @@ class RsvpView extends StatelessWidget {
         left: context.maxWidth * 0.08,
         right: context.maxWidth * 0.08,
         top: context.maxWidth * 0.1,
-        bottom: context.maxWidth * 0.1,
       ),
       child: body,
     );

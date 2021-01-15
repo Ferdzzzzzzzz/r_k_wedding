@@ -16,14 +16,14 @@ class _$RsvpFormStateTearOff {
 // ignore: unused_element
   _RsvpFormState call(
       {@required String names,
-      @required Option<Rsvp> optionRSVP,
+      @required Option<bool> optionAccepts,
       @required String dietryRequirements,
       @required bool canSubmit,
       @required bool isSubmitting,
       @required Option<Either<RsvpFailure, Unit>> optionEitherFailureOrUnit}) {
     return _RsvpFormState(
       names: names,
-      optionRSVP: optionRSVP,
+      optionAccepts: optionAccepts,
       dietryRequirements: dietryRequirements,
       canSubmit: canSubmit,
       isSubmitting: isSubmitting,
@@ -39,7 +39,7 @@ const $RsvpFormState = _$RsvpFormStateTearOff();
 /// @nodoc
 mixin _$RsvpFormState {
   String get names;
-  Option<Rsvp> get optionRSVP;
+  Option<bool> get optionAccepts;
   String get dietryRequirements;
   bool get canSubmit;
   bool get isSubmitting;
@@ -55,7 +55,7 @@ abstract class $RsvpFormStateCopyWith<$Res> {
       _$RsvpFormStateCopyWithImpl<$Res>;
   $Res call(
       {String names,
-      Option<Rsvp> optionRSVP,
+      Option<bool> optionAccepts,
       String dietryRequirements,
       bool canSubmit,
       bool isSubmitting,
@@ -74,7 +74,7 @@ class _$RsvpFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object names = freezed,
-    Object optionRSVP = freezed,
+    Object optionAccepts = freezed,
     Object dietryRequirements = freezed,
     Object canSubmit = freezed,
     Object isSubmitting = freezed,
@@ -82,9 +82,9 @@ class _$RsvpFormStateCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       names: names == freezed ? _value.names : names as String,
-      optionRSVP: optionRSVP == freezed
-          ? _value.optionRSVP
-          : optionRSVP as Option<Rsvp>,
+      optionAccepts: optionAccepts == freezed
+          ? _value.optionAccepts
+          : optionAccepts as Option<bool>,
       dietryRequirements: dietryRequirements == freezed
           ? _value.dietryRequirements
           : dietryRequirements as String,
@@ -107,7 +107,7 @@ abstract class _$RsvpFormStateCopyWith<$Res>
   @override
   $Res call(
       {String names,
-      Option<Rsvp> optionRSVP,
+      Option<bool> optionAccepts,
       String dietryRequirements,
       bool canSubmit,
       bool isSubmitting,
@@ -128,7 +128,7 @@ class __$RsvpFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object names = freezed,
-    Object optionRSVP = freezed,
+    Object optionAccepts = freezed,
     Object dietryRequirements = freezed,
     Object canSubmit = freezed,
     Object isSubmitting = freezed,
@@ -136,9 +136,9 @@ class __$RsvpFormStateCopyWithImpl<$Res>
   }) {
     return _then(_RsvpFormState(
       names: names == freezed ? _value.names : names as String,
-      optionRSVP: optionRSVP == freezed
-          ? _value.optionRSVP
-          : optionRSVP as Option<Rsvp>,
+      optionAccepts: optionAccepts == freezed
+          ? _value.optionAccepts
+          : optionAccepts as Option<bool>,
       dietryRequirements: dietryRequirements == freezed
           ? _value.dietryRequirements
           : dietryRequirements as String,
@@ -156,13 +156,13 @@ class __$RsvpFormStateCopyWithImpl<$Res>
 class _$_RsvpFormState implements _RsvpFormState {
   const _$_RsvpFormState(
       {@required this.names,
-      @required this.optionRSVP,
+      @required this.optionAccepts,
       @required this.dietryRequirements,
       @required this.canSubmit,
       @required this.isSubmitting,
       @required this.optionEitherFailureOrUnit})
       : assert(names != null),
-        assert(optionRSVP != null),
+        assert(optionAccepts != null),
         assert(dietryRequirements != null),
         assert(canSubmit != null),
         assert(isSubmitting != null),
@@ -171,7 +171,7 @@ class _$_RsvpFormState implements _RsvpFormState {
   @override
   final String names;
   @override
-  final Option<Rsvp> optionRSVP;
+  final Option<bool> optionAccepts;
   @override
   final String dietryRequirements;
   @override
@@ -183,7 +183,7 @@ class _$_RsvpFormState implements _RsvpFormState {
 
   @override
   String toString() {
-    return 'RsvpFormState(names: $names, optionRSVP: $optionRSVP, dietryRequirements: $dietryRequirements, canSubmit: $canSubmit, isSubmitting: $isSubmitting, optionEitherFailureOrUnit: $optionEitherFailureOrUnit)';
+    return 'RsvpFormState(names: $names, optionAccepts: $optionAccepts, dietryRequirements: $dietryRequirements, canSubmit: $canSubmit, isSubmitting: $isSubmitting, optionEitherFailureOrUnit: $optionEitherFailureOrUnit)';
   }
 
   @override
@@ -192,9 +192,9 @@ class _$_RsvpFormState implements _RsvpFormState {
         (other is _RsvpFormState &&
             (identical(other.names, names) ||
                 const DeepCollectionEquality().equals(other.names, names)) &&
-            (identical(other.optionRSVP, optionRSVP) ||
+            (identical(other.optionAccepts, optionAccepts) ||
                 const DeepCollectionEquality()
-                    .equals(other.optionRSVP, optionRSVP)) &&
+                    .equals(other.optionAccepts, optionAccepts)) &&
             (identical(other.dietryRequirements, dietryRequirements) ||
                 const DeepCollectionEquality()
                     .equals(other.dietryRequirements, dietryRequirements)) &&
@@ -215,7 +215,7 @@ class _$_RsvpFormState implements _RsvpFormState {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(names) ^
-      const DeepCollectionEquality().hash(optionRSVP) ^
+      const DeepCollectionEquality().hash(optionAccepts) ^
       const DeepCollectionEquality().hash(dietryRequirements) ^
       const DeepCollectionEquality().hash(canSubmit) ^
       const DeepCollectionEquality().hash(isSubmitting) ^
@@ -231,7 +231,7 @@ abstract class _RsvpFormState implements RsvpFormState {
           {@required
               String names,
           @required
-              Option<Rsvp> optionRSVP,
+              Option<bool> optionAccepts,
           @required
               String dietryRequirements,
           @required
@@ -245,7 +245,7 @@ abstract class _RsvpFormState implements RsvpFormState {
   @override
   String get names;
   @override
-  Option<Rsvp> get optionRSVP;
+  Option<bool> get optionAccepts;
   @override
   String get dietryRequirements;
   @override
